@@ -60,7 +60,7 @@ relevant information related to the platform.
 
 Front End
 
-The front end of StudyNotion has all the necessary pages that an ed-tech platform should
+The front end of TechMind has all the necessary pages that an ed-tech platform should
 have. Some of these pages are:
 
 For Students:
@@ -87,6 +87,8 @@ including the number of views, clicks, and other relevant metrics.
 and delete courses, as well as manage the course content and pricing.
 * View and Edit Profile Details: These pages will allow the instructor to view and edit
 their account details.
+
+
 PAGE 3
 For Admin (this is for future scope):
 * Dashboard: This page will have an overview of the platform's courses, instructors,
@@ -106,11 +108,11 @@ library for React.
 Back End
 
 Description of the Back-end Architecture: 
-StudyNotion uses a monolithic architecture, with the backend built using Node.js and
+TechMind uses a monolithic architecture, with the backend built using Node.js and
 Express.js, and MongoDB as the primary database. 
 
 Features and Functionalities of the Back-end: 
-The back end of StudyNotion provides a range of features and functionalities, including:
+The back end of TechMind provides a range of features and functionalities, including:
 1. User authentication and authorization: Students and instructors can sign up and log in
 to the platform using their email addresses and password. The platform also supports
 OTP (One-Time Password) verification and forgot password functionality for added
@@ -141,7 +143,7 @@ data.
 way to interact with MongoDB using JavaScript
 
 Data Models and Database Schema: 
-The back end of StudyNotion uses a range of data models and database schemas to
+The back end of TechMind uses a range of data models and database schemas to
 manage data, including:
 1. Student schema: Includes fields such as name, email, password, and course details
 for each student.
@@ -150,7 +152,7 @@ details for each instructor.
 3. Course schema: Includes fields such as course name, description, instructor details,
 and media content.
 
-Overall, the back-end of StudyNotion is designed to provide a robust and scalable solution
+Overall, the back-end of TechMind is designed to provide a robust and scalable solution
 for an ed-tech platform, with a focus on security, reliability, and ease of use. By using the
 right frameworks, libraries, and tools, we can ensure that the platform functions smoothly
 and provides an optimal user experience for all its users.
