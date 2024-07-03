@@ -40,7 +40,7 @@ exports.createCourse = async (req, res) => {
       !courseDescription ||
       !whatYouWillLearn ||
       !price ||
-       !tag.length ||
+       !tag ||
       !thumbnail ||
        !category //||
      //  !instructions.length
