@@ -189,7 +189,7 @@ Sample API requests and responses:
 5. DELETE /api/courses/:id: Delete a course by ID
    * Response: A success message indicating that the course has been deleted.
 
-In conclusion, the REST API design for the StudyNotion ed-tech platform is a crucial part
+In conclusion, the REST API design for the TechMind ed-tech platform is a crucial part
 of the project. The API endpoints and their functionalities are designed to ensure seamless
 communication between the front-end and back-end of the application. By following
 RESTful principles, the API will be scalable, maintainable, and reliable. The sample API
