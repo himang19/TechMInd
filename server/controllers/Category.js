@@ -30,7 +30,7 @@ exports.createCategory = async (req, res) => {
 
 exports.showAllCategories = async (req, res) => {
   try {
-    const allCategorys = await Category.find({},{name:true,description:true})
+    const allCategorys = await Category.find()
     res.status(200).json({
       success: true,
       data: allCategorys,
@@ -65,7 +65,7 @@ exports.categoryPageDetails = async (req, res) => {
         .json({ success: false, message: "Category not found" })
     }
     // Handle the case when there are no courses
-    if (selectedCategory.courses === 0) {
+    if (selectedCategory.courses.length === 0) {
       console.log("No courses found for the selected category.")
       return res.status(404).json({
         success: false,
@@ -76,9 +76,9 @@ exports.categoryPageDetails = async (req, res) => {
     // Get courses for other categories
     const categoriesExceptSelected = await Category.find({
       _id: { $ne: categoryId },
-    })     //ne=notequal to categoryId 
+    })
     let differentCategory = await Category.findOne(
-      categoriesExceptSelected[getRandomInt(categoriesExceptSelected)]
+      categoriesExceptSelected[getRandomInt(categoriesExceptSelected.length)]
         ._id
     )
       .populate({
