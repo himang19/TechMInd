@@ -12,7 +12,8 @@ import CourseAccordionBar from "../components/core/Course/CourseAccordionBar"
 import CourseDetailsCard from "../components/core/Course/CourseDetailsCard"
 import { formatDate } from "../services/formatDate"
 import { fetchCourseDetails } from "../services/operations/courseDetailsAPI"
-import { BuyCourse } from "../services/operations/studentFeaturesAPI"
+// import { BuyCourse } from "../services/operations/studentFeaturesAPI"
+import { enrollInCourses } from "../services/operations/studentFeaturesAPI"
 import GetAvgRating from "../utils/avgRating"
 import Error from "./Error"
 
@@ -103,7 +104,7 @@ function CourseDetails() {
 
   const handleBuyCourse = () => {
     if (token) {
-      BuyCourse(token, [courseId], user, navigate, dispatch)
+      enrollInCourses(token, [courseId], dispatch, navigate) // Enroll the user in the course directly
       return
     }
     setConfirmationModal({
@@ -117,7 +118,7 @@ function CourseDetails() {
   }
 
   if (paymentLoading) {
-    // console.log("payment loading")
+     console.log("payment loading")
     return (
       <div className="grid min-h-[calc(100vh-3.5rem)] place-items-center">
         <div className="spinner"></div>
@@ -175,7 +176,7 @@ function CourseDetails() {
                 Rs. {price}
               </p>
               <button className="yellowButton" onClick={handleBuyCourse}>
-                Buy Now
+                Enroll Now
               </button>
               <button className="blackButton">Add to Cart</button>
             </div>

@@ -5,6 +5,7 @@ const userRoutes=require("./routes/user");
 const profileRoutes=require("./routes/profile");
 const paymentRoutes=require("./routes/Payments");
 const courseRoutes=require("./routes/Course");
+const contactRoutes=require("./routes/Contact");
 
 const database=require("./config/database");
 const cookieParser=require("cookie-parser");
@@ -43,6 +44,7 @@ app.use("/api/v1/auth",userRoutes);
 app.use("/api/v1/profile",profileRoutes);
 app.use("/api/v1/payment",paymentRoutes);
 app.use("/api/v1/course",courseRoutes);
+app.use("/api/v1/reach",contactRoutes);
 
 app.get("/",(req,res)=>{
     return res.json({

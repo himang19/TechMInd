@@ -66,13 +66,14 @@ exports.signup = async (req, res) => {
         success: false,
         message: "The OTP is not valid",
       })
-    } else if (otp !== response[0].otp) {
+    }
+     else if (otp !== response[0].otp) {
       // Invalid OTP
       return res.status(400).json({
         success: false,
         message: "The OTP is not valid",
       })
-    }
+}
 
     // Hash the password
     const hashedPassword = await bcrypt.hash(password, 10)
