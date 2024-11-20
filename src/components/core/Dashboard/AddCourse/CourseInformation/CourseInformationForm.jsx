@@ -45,7 +45,7 @@ export default function CourseInformationForm() {
     // if form is in edit mode
     if (editCourse) {
       // console.log("data populated", editCourse)
-      setValue("courseTitle", course.courseName)
+      setValue("courseTitle", course.courseName)  
       setValue("courseShortDesc", course.courseDescription)
       setValue("coursePrice", course.price)
       setValue("courseTags", course.tag)
