@@ -57,7 +57,7 @@ export default function NestedView({ handleChangeEditSectionName }) {
         id="nestedViewContainer"
       >
         {course?.courseContent?.map((section) => (
-          // Section Dropdown
+          // Section Dropdown 
           <details key={section._id} open>
             {/* Section Dropdown Content */}
             <summary className="flex cursor-pointer items-center justify-between border-b-2 border-b-richblack-600 py-2">
